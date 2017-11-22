@@ -4,7 +4,14 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
 import io.vertx.ext.web.Router;
-
+/**
+ * 调试方法：
+ * http://localhost:8080/article/add?fld_title=测试&fld_content=测试
+ * http://localhost:8080/article/findAll
+ * http://localhost:8080/article/update?fld_id=1&fld_title=测试&fld_content=测试
+ * http://localhost:8080/article/find?fld_id=1
+ * http://localhost:8080/article/delete?fld_id=1
+ */
 public class ArticleRouter {
 	public static final Logger LOGGER = LoggerFactory.getLogger(ArticleRouter.class);
 
@@ -44,10 +51,7 @@ public class ArticleRouter {
 
 	}
 
-	/**
-	 * 
-	 * 调试方法：http://localhost:8080/article/add?fld_title=测试&fld_content=测试
-	 */
+
 	public void add() {
 
 		router.route("/article/add").blockingHandler(routingContext -> {
