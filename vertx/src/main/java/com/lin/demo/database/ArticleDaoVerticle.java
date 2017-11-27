@@ -77,7 +77,7 @@ public class ArticleDaoVerticle extends AbstractVerticle implements BaseCRUD {
 
 					if (res.succeeded()) {
 
-						msg.reply(new JsonObject());
+						msg.reply(res.result().toJson());
 					} else {
 						LOGGER.info(res.cause());
 					}
