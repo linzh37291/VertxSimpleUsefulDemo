@@ -82,6 +82,7 @@ public class ArticleDaoVerticle extends AbstractVerticle implements BaseCRUD {
 						LOGGER.info(res.cause());
 					}
 				});
+				sqlConnection.close();
 			}
 		});
 	}
@@ -107,6 +108,7 @@ public class ArticleDaoVerticle extends AbstractVerticle implements BaseCRUD {
 					
 
 				});
+				sqlConnection.close();
 			}
 
 		});
@@ -131,6 +133,7 @@ public class ArticleDaoVerticle extends AbstractVerticle implements BaseCRUD {
 						LOGGER.info(res.cause());
 					}
 				});
+				sqlConnection.close();
 			}
 
 		});
@@ -154,6 +157,7 @@ public class ArticleDaoVerticle extends AbstractVerticle implements BaseCRUD {
 						LOGGER.info(res.cause());
 					}
 				});
+				sqlConnection.close();
 			}
 
 		});
@@ -174,6 +178,7 @@ public class ArticleDaoVerticle extends AbstractVerticle implements BaseCRUD {
 						LOGGER.info(res.cause());
 					}
 				});
+				sqlConnection.close();
 			}
 
 		});
